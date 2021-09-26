@@ -18,7 +18,7 @@
 }
 
 *::selection {
-  background: var(#2c0202);
+  background-image: linear-gradient(#312A6C, #852D91);
   color: #fff;
 }
 
@@ -30,7 +30,7 @@ html {
 }
 
 body {
-  background: var(--black);
+  background-image: linear-gradient(#312A6C, #852D91);
 }
 
 section {
@@ -72,7 +72,7 @@ header {
   left: 0;
   right: 0;
   z-index: 10000;
-  background: var(--black);
+  background-image: linear-gradient(#312A6C, #852D91);
   padding: 2rem 9%;
   display: flex;
   align-items: center;
@@ -216,7 +216,7 @@ header .navbar a:hover {
 
 .vendor .box-container .box .info p {
   font-size: 1.7rem;
-  color: #333;
+  color: #fff;
   padding: 1rem;
 }
 
@@ -248,7 +248,7 @@ header .navbar a:hover {
 
 .clients .row .box-container .box .info p {
   font-size: 1.7rem;
-  color: #aaa;
+  color: #fff;
   padding: 1rem 0;
   font-style: italic;
 }
