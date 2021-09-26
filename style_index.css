@@ -138,7 +138,7 @@ section::after {
 
 .heart {
   width: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   animation: heartBeat 1s ease-in-out infinite;
 }
 
@@ -186,14 +186,30 @@ section::after {
   font-weight: 300;
 }
 
-.step{
-  background: rgb(255, 255, 255, 0.05);
-  margin: 1rem;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.9);
+.container .step{
+  position: relative;
+  width: 980px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  flex: 1 1 30rem;
+  backdrop-filter: blur(10px);
+}
+.container .step li {
+  list-style: none;
+  margin: 0 10px;
+  transform: translateY(-40px);
+  transition: 0.5s;
+  opacity: 0;
+  transition-delay: calc(0.1s * var(--i));
+}
+.container .step:hover li{
+  opacity: 1;
+  transform: translateY(-5px);
 }
 
 .btn {
@@ -203,6 +219,6 @@ section::after {
   font-weight: 500;
   font-size: 20px;
   text-align: center;
-  line-height: 2em;
+  line-height: 5em;
   text-decoration: none;
 }
