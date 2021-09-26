@@ -40,10 +40,9 @@ section {
 .btn {
   display: inline-block;
   margin-top: 1rem;
-  border: 0.2rem solid var(--black);
   color: var(--black);
   font-size: 1.7rem;
-  padding: 0.8rem 3rem;
+  padding: 0.8rem 1.5rem;
   cursor: pointer;
   background: none;
 }
@@ -113,7 +112,6 @@ header .navbar a:hover {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-
 }
 
 .home .content span {
