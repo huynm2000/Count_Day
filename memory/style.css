@@ -1,0 +1,17 @@
+    #card
+{
+   margin: 20px 100px 0px 400px; //400px;
+   width: 625px;
+}
+#card div
+{
+   float: left;   
+   width: 105px;
+   height: 105px;
+   background: #5cacee;
+   margin: 5px;
+   border: 1px solid #999;
+   cursor: pointer;
+   -webkit-border-radius: .5em;
+   -moz-border-radius: .5em;
+}

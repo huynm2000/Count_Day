@@ -1,0 +1,122 @@
+<script type="text/javascript" src="memory/js/jquery.js"></script>
+<script type="text/javascript" src="memory/js/functions.js"></script>
+<link rel="stylesheet" type="text/css" href="memory/style.css"/>
+<title>Memory Game</title>
+<script type="text/javascript">
+var showimg = "";
+var imageopen = "";
+var pair = 0;
+$(document).ready(function() {
+    $("img").hide();
+    shuffle();
+    $("#card div").click(function()
+    {
+        id = $(this).attr("id");
+        if ($("#"+id+" img").is(":hidden"))
+        {
+            $("#"+id+" img").fadeIn('slow');
+            if (imageopen == "")
+            {
+                showimg = id;
+                imageopen = $("#"+id+" img").attr("src");
+            }
+            else
+            {
+                currentopened = $("#"+id+" img").attr("src");
+                if (imageopen != currentopened)
+                {
+                    $("#"+id+" img").slideUp("slow");
+                    $("#"+showimg+" img").slideUp("slow");
+                    showimg = "";
+                    imageopen = "";
+                }
+                else
+                {
+                    $("#"+id+" img").show();
+                    $("#"+showimg+" img").show();
+                    showimg = "";
+                    imageopen = "";
+                    pair+=1;
+                }
+            }
+            if(pair==10)
+            {
+                setTimeout('finish()', 400);
+            }    
+        }
+    });
+});
+function finish()
+{
+    var cnt1 = $("#counting").val();
+    var tim=$("#timecount").val();
+    alert("Congratulations! You have won the game Total Move : "+cnt1+"   Time : "+tim+" seconds");
+    if(confirm("Do you want to play again"))
+    {
+        stopCount();
+        window.location.href="memory.html";
+    }
+    else
+    {
+        window.location.href="../memory-game.php";
+    }
+}
+function ctck()
+{
+    var sds = document.getElementById("dum");
+    if(sds == null)
+    {
+        alert("You are using a free package.\n You are not allowed to remove the tag.\n");
+    }
+    var sdss = document.getElementById("dumdiv");
+    if(sdss == null)
+    {
+        alert("You are using a free package.\n You are not allowed to remove the tag.\n");
+    }
+} 
+</script>
+
+<div style="padding-left: 540px; margin-top: 10px; font-size: 27px; font-weight: bold; color: green;">The Memory Game</div>
+<div style="padding-left:20px; margin-top: 25px;">
+    <table>
+        <tr>
+            <td style="padding-left: 540px; text-align: center;">
+                Moves: <input type="text" id="counting" name="cnt" size="6" readonly />
+            </td>
+            <td style="padding-left: 10px;">
+                Time: <input type="text" id="timecount" name="time" size="6" readonly />
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="card" onclick="count();" align="center"> 
+    <div id="image1" onclick="doTimer();"><img src="memory/images/speaker.png" style='display: none; border: none;' id="im"></div>
+    <div id="image2" onclick="doTimer();"><img src="memory/images/floppy.png" style='display: none; border: none;' id="im1"></div>
+    <div id="image3" onclick="doTimer();"><img src="memory/images/mphone.png" style='display: none; border: none;' id="im2"></div>
+    <div id="image4" onclick="doTimer();"><img src="memory/images/call.png" style='display: none; border: none;' id="im3"></div>
+    <div id="image5" onclick="doTimer();"><img src="memory/images/WinZip.png" style='display: none; border: none; ' id="im4"></div>
+    <div id="image6" onclick="doTimer();"><img src="memory/images/window.png" style='display: none; border: none; ' id="im5"></div>
+    <div id="image7" onclick="doTimer();"><img src="memory/images/tablet-android.png" style='display: none; border: none; ' id="im6"></div>
+    <div id="image8" onclick="doTimer();"><img src="memory/images/to_pa3923u1lc3_100.png" style='display: none; border: none; ' id="im7"></div>
+    <div id="image9" onclick="doTimer();"><img src="memory/images/index_articleImage-Monitor.png" style='display: none; border: none; ' id="im8"></div>
+    <div id="image10" onclick="doTimer();"><img src="memory/images/usb.png" style='display: none; border: none; ' id="im9"></div>
+    <div id="image11" onclick="doTimer();"><img src="memory/images/speaker.png" style='display: none; border: none; ' id="im10"></div>
+    <div id="image12" onclick="doTimer();"><img src="memory/images/floppy.png" style='display: none; border: none; ' id="im11"></div>
+    <div id="image13" onclick="doTimer();"><img src="memory/images/mphone.png" style='display: none; border: none; ' id="im12"></div>
+    <div id="image14" onclick="doTimer();"><img src="memory/images/call.png" style='display: none; border: none; ' id="im13"></div>
+    <div id="image15" onclick="doTimer();"><img src="memory/images/WinZip.png" style='display: none; border: none; ' id="im14"></div>
+    <div id="image16" onclick="doTimer();"><img src="memory/images/window.png" style='display: none; border: none; ' id="im15"></div>
+    <div id="image17" onclick="doTimer();"><img src="memory/images/tablet-android.png" style='display: none; border: none; ' id="im16"></div>
+    <div id="image18" onclick="doTimer();"><img src="memory/images/to_pa3923u1lc3_100.png" style='display: none; border: none; ' id="im17"></div>
+    <div id="image19" onclick="doTimer();"><img src="memory/images/index_articleImage-Monitor.png" style='display: none; border: none; ' id="im18"></div>
+    <div id="image20" onclick="doTimer();"><img src="memory/images/usb.png" style='display: none; border: none; ' id="im19"></div>
+</div>
+<table style='margin-top: 450px;'>
+    <tr>
+        <td>
+            <div align=center style="font-size: 10px; color: #dadada;" id="dumdiv">
+                <a href="http://www.hscripts.com" id="dum" style="text-decoration:none; color: #dadada;">&copy;h</a>
+            </div>
+        </td>
+    </tr>
+</table>

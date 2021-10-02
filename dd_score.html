@@ -1,0 +1,26 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    </head>
+    <body>
+         <a href='index.html'><span style="padding-left: 20px;">Back</span></a>
+    
+       <div id="home" style="width: 40%;height: 200px;background-color:darkturquoise ;margin-left: 30%;margin-top: 10%;border: 1px solid black;text-align: center">
+            <p id="score" style="font-size: 40px;font-weight: bolder;font-style: italic"></p>
+      </div>
+     <script>
+            {
+              
+            var name=localStorage.getItem( "wicked" );
+            document.getElementById('score').innerHTML ="Your score is " +name+"<br> <a href='index.html'>Back</a>";
+            }
+        </script>    
+    </body>
+</html>

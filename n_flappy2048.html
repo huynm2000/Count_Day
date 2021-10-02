@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Flappy 2048</title>
+
+  <link href="flappy2048/style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="flappy2048/favicon.ico">
+  <link rel="apple-touch-icon" href="flappy2048/meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+   </head>
+    <body>
+        <div id="menulogo" align=center>
+            <h4>     <a href="n_tetris.html"><img width="50px" hight="50px" src="logo/tetris.png"></a>    
+                    <a href="n_memory.html"><img width="50px" hight="50px" src="logo/memory.png"></a> 
+                    <a href="n_snake.html"><img width="50px" hight="50px" src="logo/snake.png"></a> 
+                    <a href="n_alien.html"><img width="50px" hight="50px" src="logo/alien.png"></a> 
+                    <a href="n_minmario.html"><img width="50px" hight="50px" src="logo/mario.png"></a>
+                    <a href="n_g2048.html"><img width="50px" hight="50px" src="logo/2048.png"></a>
+                    <a href="n_flappy2048.html"><img width="50px" hight="50px" src="logo/flappy2048.png"></a>
+                    <a href="n_dxball.html"><img width="50px" hight="50px" src="logo/dxball.png"></a>
+                    <a href="n_cosmos.html"><img width="50px" hight="50px" src="logo/cosmos.png"></a>
+                    <a href="n_battlecity.html"><img width="50px" hight="50px" src="logo/battle.png"></a>
+                    <a href="n_pacman.html"><img width="50px" hight="50px" src="logo/pacman.png"></a>
+                    <a href="n_clumsybird.html"><img width="50px" hight="50px" src="logo/flappy.png"></a>               
+                    <a href="n_spaceinvaders.html"><img width="50px" hight="50px" src="logo/space.png"></a> 
+                    <a href="n_delta.html"><img width="50px" hight="50px" src="logo/delta.png"></a>
+                    <a href="n_boulder.html"><img width="50px" hight="50px" src="logo/boulder.png"></a>
+
+                </h4>
+            </div>
+         <div class="container">
+    <div class="heading">
+      <h1 class="title">Flappy 2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+    <p class="game-intro">Jump through the tiles and get to <strong>2048!</strong></p>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button">Try again</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="tile tile-block-a"><div class="tile-inner"></div></div>
+        <div class="tile tile-block-b"><div class="tile-inner"></div></div>
+        <div class="tile tile-block-c"><div class="tile-inner"></div></div>
+        <div class="tile tile-block-d"><div class="tile-inner"></div></div>
+        <div class="tile tile-bird"><div class="tile-inner"></div></div>
+      </div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">How to play:</strong> Press <strong>any key</strong> to move the tile. When the tile go through a barrier, you get <strong>score!</strong>
+    </p>
+    <hr>
+    <p>
+    Created by <a href="http://github.com/hczhcz" target="_blank">hcz.</a> Based on <a href="http://gabrielecirulli.com" target="_blank">2048 by Gabriele Cirulli</a> and <a href="http://en.wikipedia.org/wiki/Flappy_Bird" target="_blank">Flappy Bird by Dong Nguyen.</a>
+    </p>
+    <hr>
+    <p>More 2048 games:</p>
+    <p><a href="https://hczhcz.github.io/Racing-2048">Racing 2048</a>, <a href="https://hczhcz.github.io/2048">Upside down</a>, <a href="https://hczhcz.github.io/2048/2047">Role reversal</a>, <a href="https://hczhcz.github.io/2048/20ez">Easy ver</a>, <a href="https://hczhcz.github.io/2048/20mu">喵 ver</a>, <a href="https://hczhcz.github.io/my-2048">Customizable 2048</a></p>
+  </div>
+
+  <a href="https://github.com/hczhcz/Flappy-2048"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>
+
+  <script src="flappy2048/js/animframe_polyfill.js"></script>
+  <script src="flappy2048/js/keyboard_input_manager.js"></script>
+  <script src="flappy2048/js/html_actuator.js"></script>
+  <script src="flappy2048/js/grid.js"></script>
+  <script src="flappy2048/js/tile.js"></script>
+  <script src="flappy2048/js/local_score_manager.js"></script>
+  <script src="flappy2048/js/game_manager.js"></script>
+  <script src="flappy2048/js/application.js"></script>
+    </body>
+</html>

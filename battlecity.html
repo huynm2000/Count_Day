@@ -1,0 +1,81 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="tank,html5,canvas,ai">
+	<title>Battle City AI</title>
+	<link href="battle/css/style.css" media="all" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">window.onload = function(){main()}</script>
+</head>
+<body >
+	<div class="container">
+	<div id = "srcImg">
+		<img src="battle/img/tankAll.gif" id = "tankAll"/>
+	</div>
+	
+	<div id="game">
+		<canvas id="wall" width="512" height="448"></canvas> 
+		<canvas id="main" width="512" height="448"></canvas>
+		<canvas id="grass" width="512" height="448"></canvas>	
+		<canvas id="upp" width="512" height="448"></canvas> 
+		<canvas id="stage" width="512" height="448"></canvas> 
+	</div>
+	
+	<div id = "header">
+		<h1>Battle City AI</h1>
+	</div>
+	<ul id = "player1">
+		主机Player1
+		<li>方向: ↑↓→←</li>
+		<li>开火:空格/回车</li>
+	</ul>
+	<ul id = "player2">
+		副机Player2
+		<li>方向: w s a d</li>
+		<li>开火: j</li>
+	</ul>
+	<ul id="author">
+		<li>游戏制作: <a href="http://weibo.com/06wj">06wj</a></li>	
+		<li>游戏AI: <a href="http://weibo.com/rubyshoes">Jules.Wang</a></li>
+			<br>
+		<li><a href="http://evertips.info/topics/51852569d4375871b6000015">攻略秘笈</a></li>	
+                <br><br>
+                <li><a href="index.html">Back</a></li>
+    
+  
+        </ul>		
+
+	<div id="fast-mode"></div>		
+	</div>
+	<canvas id="astar" width="512" height="448"></canvas>
+	</div>
+	<a href="https://github.com/JulesWang/BattleCity.AI"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+	<script type="text/javascript" src = "battle/js/Const.js"></script>
+	<script type="text/javascript" src = "battle/js/Sound.js"></script>
+	<script type="text/javascript" src = "battle/js/Map.js"></script>
+	<script type="text/javascript" src = "battle/js/MapLevel.js"></script>
+	<script type="text/javascript" src = "battle/js/StageStart.js"></script>
+	<script type="text/javascript" src = "battle/js/Sprite.js"></script>
+	<script type="text/javascript" src = "battle/js/Score.js"></script>
+	<script type="text/javascript" src = "battle/js/TankStart.js"></script>
+	<script type="text/javascript" src = "battle/js/Tank.js"></script>
+	<script type="text/javascript" src = "battle/js/MyTank.js"></script>
+	<script type="text/javascript" src = "battle/js/Bullet.js"></script>
+	<script type="text/javascript" src = "battle/js/HitFx.js"></script>
+	<script type="text/javascript" src = "battle/js/BombFx.js"></script>
+	<script type="text/javascript" src = "battle/js/Food.js"></script>
+	<script type="text/javascript" src = "battle/js/ScoreBoard.js"></script>
+	<script type="text/javascript" src = "battle/js/Score.js"></script>
+	<script type="text/javascript" src = "battle/js/Num.js"></script>
+	<script type="text/javascript" src = "battle/js/Main.js"></script>
+	<script type="text/javascript" src = "battle/js/BinaryHeap.js"></script>
+	<script type="text/javascript" src = "battle/js/AI.js"></script>
+	
+	<audio id="attack" src="battle/sound/attack.mp3"></audio>
+	<audio id="bomb0" src="battle/sound/bomb0.mp3"></audio>
+	<audio id="bomb1" src="battle/sound/bomb1.mp3"></audio>
+	<audio id="food" src="battle/sound/food.mp3"></audio>
+	<audio id="stageStart" src="battle/sound/stageStart.mp3"></audio>
+	<audio id="shootOver" src="battle/sound/shootOver.mp3"></audio>
+</body>
+</html>

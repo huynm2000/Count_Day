@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML5 Pacman</title>
+    
+    <style type="text/css">
+      @font-face {
+	    font-family: 'BDCartoonShoutRegular';
+        src: url('pacman/BD_Cartoon_Shout-webfont.ttf') format('truetype');
+	    font-weight: normal;
+	    font-style: normal;
+      }
+      #pacman {
+        height:450px;
+        width:342px;
+        margin:20px auto;
+      }
+      #shim { 
+        font-family: BDCartoonShoutRegular; 
+        position:absolute;
+        visibility:hidden
+      }
+      h1 { font-family: BDCartoonShoutRegular; text-align:center; }
+      body { width:342px; margin:0px auto; font-family:sans-serif; }
+      a { text-decoration:none; }
+    </style>
+
+    </head>
+    <body>
+        <div id="menulogo" align=center>
+            <h4>     <a href="n_tetris.html"><img width="50px" hight="50px" src="logo/tetris.png"></a>    
+                    <a href="n_memory.html"><img width="50px" hight="50px" src="logo/memory.png"></a> 
+                    <a href="n_snake.html"><img width="50px" hight="50px" src="logo/snake.png"></a> 
+                    <a href="n_alien.html"><img width="50px" hight="50px" src="logo/alien.png"></a> 
+                    <a href="n_minmario.html"><img width="50px" hight="50px" src="logo/mario.png"></a>
+                    <a href="n_g2048.html"><img width="50px" hight="50px" src="logo/2048.png"></a>
+                    <a href="n_flappy2048.html"><img width="50px" hight="50px" src="logo/flappy2048.png"></a>
+                    <a href="n_dxball.html"><img width="50px" hight="50px" src="logo/dxball.png"></a>
+                    <a href="n_cosmos.html"><img width="50px" hight="50px" src="logo/cosmos.png"></a>
+                    <a href="n_battlecity.html"><img width="50px" hight="50px" src="logo/battle.png"></a>
+                    <a href="n_pacman.html"><img width="50px" hight="50px" src="logo/pacman.png"></a>
+                    <a href="n_clumsybird.html"><img width="50px" hight="50px" src="logo/flappy.png"></a>               
+                    <a href="n_spaceinvaders.html"><img width="50px" hight="50px" src="logo/space.png"></a> 
+                    <a href="n_delta.html"><img width="50px" hight="50px" src="logo/delta.png"></a>
+                    <a href="n_boulder.html"><img width="50px" hight="50px" src="logo/boulder.png"></a>
+
+                </h4>
+            </div>
+        
+        <div id="shim">shim for font face</div>
+
+  <h1>HTML5 Pacman</h1>
+ <a href="index.html">Back</a> |
+    
+  
+  <a href="http://arandomurl.com/">Writeup</a> |
+  Code on <a href="http://arandomurl.com/">Github</a>
+
+  <div id="pacman"></div>
+  <script src="pacman/pacman.js"></script>
+  <script src="pacman/modernizr-1.5.min.js"></script>
+
+  <script>
+
+    var el = document.getElementById("pacman");
+
+    if (Modernizr.canvas && Modernizr.localstorage && 
+        Modernizr.audio && (Modernizr.audio.ogg || Modernizr.audio.mp3)) {
+      window.setTimeout(function () { PACMAN.init(el, "./"); }, 0);
+    } else { 
+      el.innerHTML = "Sorry, needs a decent browser<br /><small>" + 
+        "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
+    }
+  </script>
+
+    </body>
+</html>

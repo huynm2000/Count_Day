@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link href='http://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
+  <link href="delta/css/normalize.css" media="screen, print" rel="stylesheet" type="text/css" />
+  <link href="delta/css/delta.css"  media="screen, print" rel="stylesheet" type="text/css" />
+  <title>Javascript Delta</title>
+    </head>
+    <body>
+        <div id="menulogo" align=center>
+            <h4>     <a href="n_tetris.html"><img width="50px" hight="50px" src="logo/tetris.png"></a>    
+                    <a href="n_memory.html"><img width="50px" hight="50px" src="logo/memory.png"></a> 
+                    <a href="n_snake.html"><img width="50px" hight="50px" src="logo/snake.png"></a> 
+                    <a href="n_alien.html"><img width="50px" hight="50px" src="logo/alien.png"></a> 
+                    <a href="n_minmario.html"><img width="50px" hight="50px" src="logo/mario.png"></a>
+                    <a href="n_g2048.html"><img width="50px" hight="50px" src="logo/2048.png"></a>
+                    <a href="n_flappy2048.html"><img width="50px" hight="50px" src="logo/flappy2048.png"></a>
+                    <a href="n_dxball.html"><img width="50px" hight="50px" src="logo/dxball.png"></a>
+                    <a href="n_cosmos.html"><img width="50px" hight="50px" src="logo/cosmos.png"></a>
+                    <a href="n_battlecity.html"><img width="50px" hight="50px" src="logo/battle.png"></a>
+                    <a href="n_pacman.html"><img width="50px" hight="50px" src="logo/pacman.png"></a>
+                    <a href="n_clumsybird.html"><img width="50px" hight="50px" src="logo/flappy.png"></a>               
+                    <a href="n_spaceinvaders.html"><img width="50px" hight="50px" src="logo/space.png"></a> 
+                    <a href="n_delta.html"><img width="50px" hight="50px" src="logo/delta.png"></a>
+                    <a href="n_boulder.html"><img width="50px" hight="50px" src="logo/boulder.png"></a>
+
+                </h4>
+            </div>
+        <div id="delta">
+
+    <div id="scoreboard">
+      <span class="lives"><span class="label">LIVES:</span><img class="one" src="delta/images/life.png"><img class="two" src="images/life.png"><img class="three" src="images/life.png"></span>
+      <span class="score"><span class="label">SCORE:</span><span class="value">00000</span></span>
+    </div>
+
+    <img id="booting" src='delta/images/booting.gif'>
+
+    <h1 id="title"   style="display:none;">Delta</h1>
+    <h2 id="start"   style="display:none;">press spacebar to start</h1>
+    <h1 id="prepare" style="display:none;">Fasten Your Seatbelt</h1>
+
+    <canvas id="canvas">
+      <div class="unsupported">
+        Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
+      </div>
+    </canvas>
+
+    <div id="instructions">
+       
+      arrow keys to move, spacebar to shoot
+       <a href="index.html"><span style="padding-left: 20px;">back</span></a>
+    
+    </div>
+     
+    <div id='sound' class='on' title='toggle music and fx' style="display:none;"></div>
+
+  </div>
+
+  <script src="delta/js/vendor.js"></script>
+  <script src="delta/js/game.js"></script>
+  <script src="delta/js/delta.js"></script>
+  <script>
+    Delta();
+  </script>
+
+    </body>
+</html>

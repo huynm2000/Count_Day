@@ -1,0 +1,39 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="dragdrop/puzzle.css" rel="stylesheet" type="text/css"> 
+    </head>
+    <body>
+        
+        <div id="columns">
+            
+            
+            <div id="div1" class="column" draggable="true"><img src="dragdrop/4.gif" id="h1"></div>
+            <div id="div2" class="column" draggable="true"><img src="dragdrop/6.gif" id="h2"></div>
+            <div id="div3" class="column" draggable="true"><img src="dragdrop/1.gif" id="h3"></div>
+            <div id="div4" class="column" draggable="true"><img src="dragdrop/3.gif" id="h4"></div>
+            <div id="div5" class="column" draggable="true"><img src="dragdrop/8.gif" id="h5"></div>
+            <div id="div6" class="column" draggable="true"><img src="dragdrop/7.gif" id="h6"></div>
+            <div id="div7" class="column" draggable="true"><img src="dragdrop/2.gif" id="h7"></div>
+            <div id="div8" class="column" draggable="true"><img src="dragdrop/0.gif" id="h8"></div>
+            <div id="div9" class="column" draggable="true"><img src="dragdrop/5.gif" id="h9"></div>
+             
+        </div>
+        
+        <script src="dragdrop/puzzle.js" type="text/javascript"></script>     
+        <div id="timer" style="background-color:darkturquoise ">
+     </div>
+        <script>
+        {
+         window.onload = CreateTimer("timer", 1);
+        }
+     </script>
+    </body>
+</html>
+
